@@ -3,7 +3,7 @@ import { useDispatch, useSelector} from "react-redux";
 import dayjs from 'dayjs'
 
 import { makeStyles } from "@mui/styles";
-import { Typography, Button } from '@mui/material';
+import { Typography, Button, Tooltip } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
@@ -29,9 +29,13 @@ function Header() {
                 Google Calendar
             </Typography>
                 <Button onClick={() => dispatch(thisMonth())} variant="outlined">today</Button>
-            <div>
-                <ArrowBackIosNewIcon onClick={() => dispatch(previousMonth())}/>
-                <ArrowForwardIosIcon onClick={() => dispatch(nextMonth())}/>
+            <div style={{cursor: "pointer"}}>
+                <Tooltip title={"Show previous month"}>
+                    <ArrowBackIosNewIcon onClick={() => dispatch(previousMonth())}/>
+                </Tooltip>
+                <Tooltip title={"Show next month"}>
+                    <ArrowForwardIosIcon onClick={() => dispatch(nextMonth())}/>
+                </Tooltip>
             </div>
             <Typography variant="h6" >
                 {dayjs(new Date(dayjs().year(), monthIndex)).format("MMMM YYYY")}
