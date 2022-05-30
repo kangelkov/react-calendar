@@ -34,25 +34,14 @@ function DayBox(day) {
     const classes = useStyles();
     return (
         <>
-            {
-                checkToday()
-                ? <Box className={`${classes.dayBox} ${classes.blueBox}`}>
-                    <Typography className={classes.dateNumber}>
-                        {day.day.format('DD')}
-                    </Typography>
-                    <Typography align="center">
-                        {eventFound !== undefined && eventFound.description}
-                    </Typography>
-                    </Box>
-                    : <Box className={classes.dayBox}>
-                    <Typography className={classes.dateNumber}>
-                        {day.day.format('DD')}
-                    </Typography>
-                    <Typography align="center">
-                        {eventFound !== undefined && eventFound.description}
-                    </Typography>
-                </Box>
-            }
+            <Box className={`${checkToday() ? `${classes.blueBox} ${classes.dayBox}` : `${classes.dayBox}`}`}>
+                <Typography className={classes.dateNumber}>
+                    {day.day.format('DD')}
+                </Typography>
+                <Typography align="center">
+                    {eventFound !== undefined && eventFound.description}
+                </Typography>
+            </Box>
         </>
     );
 }
