@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "description": "Wash the car",
+    "date": "29-05-22"
+  },
+  {
+    "id": "2",
+    "description": "Walk the dog",
+    "date": "24-05-22"
+  },
+  {
+    "id": "3",
+    "description": "Learn jQuery",
+    "date": "10-06-22"
+  },
+  {
+    "id": "4",
+    "description": "Contribute to open-source",
+    "date": "30-05-22"
+  },
+  {
+    "id": "5",
+    "description": "Do nothing all day",
+    "date": "05-06-22"
+  },
+  {
+    "id": "6",
+    "description": "Do an interview task",
+    "date": "05-05-22"
+  }
+]
