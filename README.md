@@ -4,6 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+### Adding new events
+
+When adding new events to events.json file, please keep the date format as below:
+"DD-MM-YY"
+
 In the project directory, you can run:
 
 ### `npm start`
